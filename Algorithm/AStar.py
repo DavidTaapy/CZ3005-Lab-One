@@ -13,7 +13,7 @@ def search(Data, has_energy_constraint, weight = 1):  # Default weight of 1 if n
     else:
         file_name = "Task3_AStar_without_energy_constraint"
     # Start A-Star Search
-    print("Initialising AStart Search...")
+    print("Initialising A-Star Search...")
     # List of paths aka frontier - priority given to lowest f(n)
     paths = PriorityQueue()
     # Get initial f(n), which is f(n) = 0 + h(n) as distance traversed is still 0
@@ -98,6 +98,5 @@ def get_heuristic(data, vertex, weight):
     # Differences in x-coordinates and y-coordinates
     x_diff = x_end - x_curr
     y_diff = y_end - y_curr
-    # Return weight * straight-line distance
     return weight * (sqrt(x_diff ** 2 + y_diff ** 2))
 
